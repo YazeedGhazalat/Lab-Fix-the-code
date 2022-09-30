@@ -17,6 +17,8 @@ class Home extends StatelessWidget {
         title: Text(
           "Ultimate Team Quiz",
           style: TextStyle(
+            fontFamily: "BebasNeue",
+            fontStyle: FontStyle.italic,
             color: Color.fromRGBO(26, 32, 51, 1.000),
           ),
         ),
@@ -58,7 +60,8 @@ class Home extends StatelessWidget {
                   "Lets Play!",
                   style: TextStyle(
                     fontSize: 20,
-                    fontFamily: "Abyssinica",
+                    fontFamily: "BebasNeue",
+                    fontStyle: FontStyle.italic,
                   ),
                 )),
           ],

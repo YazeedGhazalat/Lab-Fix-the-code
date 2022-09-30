@@ -35,31 +35,81 @@ class _QuizState extends State<Quiz> {
                     context: context,
                     builder: ((context) {
                       return AlertDialog(
+                        backgroundColor: Color.fromRGBO(26, 32, 51, 1.000),
                         content: Text(
                           "Do you want to restart or exet??",
                           textAlign: TextAlign.center,
-                          style:
-                              TextStyle(fontFamily: "Abyssinica", fontSize: 25),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: "BebasNeue",
+                              fontStyle: FontStyle.italic,
+                              fontSize: 25),
                         ),
                         actionsAlignment: MainAxisAlignment.center,
                         actions: [
-                          ElevatedButton.icon(
-                              icon: Icon(Ionicons.enter),
-                              onPressed: (() {
-                                Navigator.pushReplacement(context,
-                                    MaterialPageRoute(
-                                  builder: ((context) {
-                                    return Home();
-                                  }),
-                                ));
-                              }),
-                              label: Text("Retake the Quiz")),
-                          ElevatedButton.icon(
-                              icon: Icon(Ionicons.exit),
-                              onPressed: () {
-                                exit(0);
-                              },
-                              label: Text("Exit App"))
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ElevatedButton.icon(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor:
+                                      Color.fromRGBO(197, 247, 80, 1.000),
+                                  alignment: Alignment.centerLeft,
+                                  minimumSize: const Size(100, 50),
+                                  elevation: 5,
+                                  shadowColor:
+                                      Color.fromRGBO(197, 247, 80, 1.000),
+                                  maximumSize: const Size(150, 50),
+                                  foregroundColor:
+                                      Color.fromRGBO(26, 32, 51, 1.000),
+                                ),
+                                icon: Icon(Ionicons.enter),
+                                onPressed: (() {
+                                  Navigator.pushReplacement(context,
+                                      MaterialPageRoute(
+                                    builder: ((context) {
+                                      return Home();
+                                    }),
+                                  ));
+                                }),
+                                label: Text(
+                                  "Retake",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: "BebasNeue",
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: 20),
+                              ElevatedButton.icon(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor:
+                                      Color.fromRGBO(197, 247, 80, 1.000),
+                                  alignment: Alignment.centerLeft,
+                                  minimumSize: const Size(100, 50),
+                                  elevation: 5,
+                                  shadowColor:
+                                      Color.fromRGBO(197, 247, 80, 1.000),
+                                  maximumSize: const Size(150, 50),
+                                  foregroundColor:
+                                      Color.fromRGBO(26, 32, 51, 1.000),
+                                ),
+                                icon: Icon(Ionicons.exit),
+                                onPressed: () {
+                                  exit(0);
+                                },
+                                label: Text(
+                                  "Exit",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: "BebasNeue",
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
+                              )
+                            ],
+                          )
                         ],
                       );
                     }));
