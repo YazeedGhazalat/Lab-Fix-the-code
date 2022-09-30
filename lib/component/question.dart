@@ -26,11 +26,11 @@ class Qus extends StatefulWidget {
 }
 
 class _QusState extends State<Qus> {
-  Color mycolor = Colors.grey;
-  Color mycolor1 = Colors.grey;
-  Color mycolor2 = Colors.grey;
-  Color mycolor3 = Colors.grey;
-  Color mycolor4 = Colors.grey;
+  Color mycolor = Color.fromARGB(255, 93, 93, 93);
+  Color mycolor1 = Color.fromARGB(255, 93, 93, 93);
+  Color mycolor2 = Color.fromARGB(255, 93, 93, 93);
+  Color mycolor3 = Color.fromARGB(255, 93, 93, 93);
+  Color mycolor4 = Color.fromARGB(255, 93, 93, 93);
   bool pressAttention1 = false;
   bool pressAttention2 = false;
   bool pressAttention3 = false;

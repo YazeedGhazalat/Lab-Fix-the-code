@@ -10,6 +10,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text("Capital of The World"),
+        centerTitle: true,
         backgroundColor: Color.fromARGB(255, 39, 39, 39),
       ),
       body: Container(
@@ -29,12 +31,13 @@ class Home extends StatelessWidget {
             ),
             ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
-                  alignment: Alignment.centerLeft,
-                  minimumSize: const Size(150, 50),
-                  elevation: 5,
-                  shadowColor: Colors.white,
-                  maximumSize: const Size(200, 50),
-                ),
+                    backgroundColor: Color.fromARGB(255, 57, 76, 200),
+                    alignment: Alignment.centerLeft,
+                    minimumSize: const Size(150, 50),
+                    elevation: 5,
+                    shadowColor: Colors.white,
+                    maximumSize: const Size(200, 50),
+                    foregroundColor: Colors.white),
                 onPressed: (() {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return Quiz();
@@ -47,7 +50,7 @@ class Home extends StatelessWidget {
                     fontSize: 20,
                     fontFamily: "Abyssinica",
                   ),
-                ))
+                )),
           ],
         )),
       ),
