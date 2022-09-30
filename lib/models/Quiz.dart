@@ -42,7 +42,8 @@ class _QuizState extends State<Quiz> {
                             ElevatedButton.icon(
                                 icon: Icon(Ionicons.enter),
                                 onPressed: (() {
-                                  Navigator.pop(context, MaterialPageRoute(
+                                  Navigator.pushReplacement(context,
+                                      MaterialPageRoute(
                                     builder: ((context) {
                                       return Home();
                                     }),
