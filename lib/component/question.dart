@@ -47,21 +47,48 @@ class _QusState extends State<Qus> {
         shrinkWrap: true,
         children: [
           SizedBox(
-            height: 5,
+            height: 40,
           ),
           Container(
-            margin: EdgeInsets.all(2),
+            margin: EdgeInsets.all(40),
             alignment: Alignment.center,
+            height: 150,
+            width: 90,
+            padding: EdgeInsets.all(8),
             constraints: BoxConstraints(maxHeight: 200, maxWidth: 60),
-            decoration: BoxDecoration(),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                shape: BoxShape.rectangle,
+                border: Border.all(width: 5.0, color: Colors.black12),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.4),
+                    spreadRadius: 2,
+                    blurRadius: 8,
+                  ),
+                ],
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 28, 5, 179).withOpacity(0.7),
+                    Color.fromARGB(255, 21, 0, 255).withOpacity(0.7),
+                    Color.fromARGB(255, 136, 188, 255).withOpacity(0.7),
+                  ],
+                )),
             child: Text(
               textAlign: TextAlign.center,
               widget.qus_text.toString(),
               style: TextStyle(
+                  shadows: <Shadow>[
+                    Shadow(
+                      offset: Offset(3.0, 3.0),
+                      blurRadius: 3.0,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  ],
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
                   fontFamily: "Abyssinica",
-                  color: Colors.yellow),
+                  color: Colors.white),
             ),
           ),
           SizedBox(
@@ -98,7 +125,8 @@ class _QusState extends State<Qus> {
                         textAlign: TextAlign.left,
                         widget.answer_1.toString(),
                         style: TextStyle(
-                          fontSize: 20,
+                          fontWeight: FontWeight.w100,
+                          fontSize: 22,
                           fontFamily: "Abyssinica",
                         ),
                       ),
@@ -127,7 +155,8 @@ class _QusState extends State<Qus> {
                       icon: FaIcon(FontAwesomeIcons.b),
                       label: Text(
                         style: TextStyle(
-                          fontSize: 20,
+                          fontWeight: FontWeight.w100,
+                          fontSize: 22,
                           fontFamily: "Abyssinica",
                         ),
                         widget.answer_2.toString(),
@@ -162,7 +191,8 @@ class _QusState extends State<Qus> {
                       icon: FaIcon(FontAwesomeIcons.c),
                       label: Text(
                         style: TextStyle(
-                          fontSize: 20,
+                          fontWeight: FontWeight.w100,
+                          fontSize: 22,
                           fontFamily: "Abyssinica",
                         ),
                         widget.answer_3.toString(),
@@ -192,7 +222,8 @@ class _QusState extends State<Qus> {
                       icon: FaIcon(FontAwesomeIcons.d),
                       label: Text(
                         style: TextStyle(
-                          fontSize: 20,
+                          fontWeight: FontWeight.w100,
+                          fontSize: 22,
                           fontFamily: "Abyssinica",
                         ),
                         widget.answer_4.toString(),
