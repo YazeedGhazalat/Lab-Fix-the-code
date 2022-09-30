@@ -10,13 +10,22 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Capital of The World"),
+        leading: Icon(
+          Ionicons.game_controller,
+          color: Color.fromRGBO(26, 32, 51, 1.000),
+        ),
+        title: Text(
+          "Ultimate Team Quiz",
+          style: TextStyle(
+            color: Color.fromRGBO(26, 32, 51, 1.000),
+          ),
+        ),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 39, 39, 39),
+        backgroundColor: Color.fromRGBO(197, 247, 80, 1.000),
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 52, 51, 51),
+          color: Color.fromRGBO(26, 32, 51, 1.000),
         ),
         child: Center(
             child: Column(
@@ -24,20 +33,21 @@ class Home extends StatelessWidget {
           children: [
             Image(
               height: 250,
-              image: AssetImage("images/2.jpg"),
+              image: AssetImage("images/cover-fifa-22.png"),
             ),
             SizedBox(
               height: 20,
             ),
             ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 57, 76, 200),
-                    alignment: Alignment.centerLeft,
-                    minimumSize: const Size(150, 50),
-                    elevation: 5,
-                    shadowColor: Colors.white,
-                    maximumSize: const Size(200, 50),
-                    foregroundColor: Colors.white),
+                  backgroundColor: Color.fromRGBO(197, 247, 80, 1.000),
+                  alignment: Alignment.centerLeft,
+                  minimumSize: const Size(150, 50),
+                  elevation: 5,
+                  shadowColor: Color.fromRGBO(197, 247, 80, 1.000),
+                  maximumSize: const Size(200, 50),
+                  foregroundColor: Color.fromRGBO(26, 32, 51, 1.000),
+                ),
                 onPressed: (() {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return Quiz();

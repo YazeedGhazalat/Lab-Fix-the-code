@@ -4,29 +4,32 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Qus extends StatefulWidget {
   Qus({
-    required this.qus_text,
     required this.answer_1,
     required this.answer_2,
     required this.answer_3,
     required this.answer_4,
     required this.numOfRightans,
+    required this.Good_playerImage,
+    required this.Bad_playerImage,
   });
 
-  String? qus_text;
+  String qus_text = "Who am I ?";
   String? answer_1;
 
   String? answer_2;
 
   String? answer_3;
-
+  String? Good_playerImage;
+  String? Bad_playerImage;
   String? answer_4;
   int? numOfRightans;
+
   @override
   State<Qus> createState() => _QusState();
 }
 
 class _QusState extends State<Qus> {
-  Color mycolor = Color.fromARGB(255, 93, 93, 93);
+  Color mycolor = Color.fromARGB(255, 24, 0, 112);
   Color mycolor1 = Color.fromARGB(255, 93, 93, 93);
   Color mycolor2 = Color.fromARGB(255, 93, 93, 93);
   Color mycolor3 = Color.fromARGB(255, 93, 93, 93);
@@ -35,6 +38,7 @@ class _QusState extends State<Qus> {
   bool pressAttention2 = false;
   bool pressAttention3 = false;
   bool pressAttention4 = false;
+  late String playerImage = widget.Bad_playerImage.toString();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,34 +50,14 @@ class _QusState extends State<Qus> {
       child: ListView(
         shrinkWrap: true,
         children: [
-          SizedBox(
-            height: 40,
-          ),
+          Image(image: AssetImage(playerImage), height: 300),
           Container(
-            margin: EdgeInsets.all(40),
+            margin: EdgeInsets.all(20),
             alignment: Alignment.center,
-            height: 150,
+            height: 100,
             width: 90,
             padding: EdgeInsets.all(8),
             constraints: BoxConstraints(maxHeight: 200, maxWidth: 60),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                shape: BoxShape.rectangle,
-                border: Border.all(width: 5.0, color: Colors.black12),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.4),
-                    spreadRadius: 2,
-                    blurRadius: 8,
-                  ),
-                ],
-                gradient: LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 28, 5, 179).withOpacity(0.7),
-                    Color.fromARGB(255, 21, 0, 255).withOpacity(0.7),
-                    Color.fromARGB(255, 136, 188, 255).withOpacity(0.7),
-                  ],
-                )),
             child: Text(
               textAlign: TextAlign.center,
               widget.qus_text.toString(),
@@ -86,13 +70,10 @@ class _QusState extends State<Qus> {
                     ),
                   ],
                   fontWeight: FontWeight.bold,
-                  fontSize: 30,
+                  fontSize: 40,
                   fontFamily: "Abyssinica",
                   color: Colors.white),
             ),
-          ),
-          SizedBox(
-            height: 60,
           ),
           Center(
             child: Column(
@@ -112,10 +93,20 @@ class _QusState extends State<Qus> {
                               pressAttention1 ? mycolor1 : mycolor),
                       onPressed: (() {
                         setState(() {
-                          if (widget.numOfRightans == 1)
+                          if (widget.numOfRightans == 1) {
                             mycolor1 = Colors.green;
-                          else
-                            (mycolor1 = Colors.red);
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    content: Image(
+                                        image: AssetImage(widget
+                                            .Good_playerImage.toString())),
+                                  );
+                                });
+                          } else {
+                            mycolor1 = Colors.red;
+                          }
                           pressAttention1 = !pressAttention1;
                           print(pressAttention1);
                         });
@@ -145,10 +136,20 @@ class _QusState extends State<Qus> {
                               pressAttention2 ? mycolor2 : mycolor),
                       onPressed: (() {
                         setState(() {
-                          if (widget.numOfRightans == 2)
+                          if (widget.numOfRightans == 2) {
                             mycolor2 = Colors.green;
-                          else
-                            (mycolor2 = Colors.red);
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    content: Image(
+                                        image: AssetImage(widget
+                                            .Good_playerImage.toString())),
+                                  );
+                                });
+                          } else {
+                            mycolor2 = Colors.red;
+                          }
                           pressAttention2 = !pressAttention2;
                         });
                       }),
@@ -181,10 +182,20 @@ class _QusState extends State<Qus> {
                               pressAttention3 ? mycolor3 : mycolor),
                       onPressed: (() {
                         setState(() {
-                          if (widget.numOfRightans == 3)
+                          if (widget.numOfRightans == 3) {
                             mycolor3 = Colors.green;
-                          else
-                            (mycolor3 = Colors.red);
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    content: Image(
+                                        image: AssetImage(widget
+                                            .Good_playerImage.toString())),
+                                  );
+                                });
+                          } else {
+                            mycolor3 = Colors.red;
+                          }
                           pressAttention3 = !pressAttention3;
                         });
                       }),
@@ -212,10 +223,20 @@ class _QusState extends State<Qus> {
                               pressAttention4 ? mycolor4 : mycolor),
                       onPressed: (() {
                         setState(() {
-                          if (widget.numOfRightans == 4)
+                          if (widget.numOfRightans == 4) {
                             mycolor4 = Colors.green;
-                          else
-                            (mycolor4 = Colors.red);
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    content: Image(
+                                        image: AssetImage(widget
+                                            .Good_playerImage.toString())),
+                                  );
+                                });
+                          } else {
+                            mycolor4 = Colors.red;
+                          }
                           pressAttention4 = !pressAttention4;
                         });
                       }),
