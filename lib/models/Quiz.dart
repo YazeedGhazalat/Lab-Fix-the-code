@@ -19,6 +19,7 @@ class _QuizState extends State<Quiz> {
       length: 6,
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Image(
             height: 30,
             image: AssetImage("images/fifa-removebg-preview.png"),

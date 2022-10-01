@@ -10,6 +10,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         leading: Icon(
           Ionicons.game_controller,
           color: Color.fromRGBO(26, 32, 51, 1.000),
